@@ -33,5 +33,5 @@ pip install timm==0.3.2
 - Install other requirements:
 
 ```bash
-pip install opencv-python==4.4.0.46 termcolor==1.1.0 yacs==0.1.8
+pip install numpy scikit-learn Pillow tqdm yacs json ftfy regex transformers einops pickle tensorwatch
 ```
