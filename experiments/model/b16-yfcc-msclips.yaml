@@ -1,0 +1,44 @@
+BASE: ['b32.yaml']
+MODEL:
+  NAME: clip_openai_pe_res_v1
+  SPEC:
+    GATHER_TENSORS: True
+    VISION:
+      PATCH_SIZE: 16
+    TEXT:
+      WIDTH: 768
+      HEADS: 12
+  PRETRAINED_MODEL: 'OUTPUT_MODEL/b16-yfcc-msclips_ckpt.pth'
+CUSTOM:
+  SHARE_MODULES: ['attn.in_proj_weight', 'attn.in_proj_bias', 'attn.out_proj', 'mlp']
+
+  LR_SHARE: 0.0016
+  WD_SHARE: 0.2
+
+  PARALLEL_IN_V: True
+  PARALLEL_N_LAYERS: 5
+  PARALLEL_LATERAL_LAYER: [2,4,6,8,10]
+  PARALLEL_KERNELS: [3, 3, 3, 3, 3]
+  PARALLEL_PADDINGS: [1, 1, 1, 1, 1]
+  PARALLEL_STRIDES: [2, 2, 2, 2, 1]
+
+  PRALLEL_T2B_KERNELS: [8, 4, 2, 1, 1]
+  PRALLEL_T2B_PADDINGS: [0, 0, 0, 0, 0]
+  PRALLEL_T2B_STRIDES: [8, 4, 2, 1, 1]
+  PRALLEL_T2B_USECLS: True
+
+  PARALLEL_RESNET: True
+  PARALLEL_RESNET_LAYERS: [0, 1, 1, 1, 1]
+
+  EARLY_CONV: True
+  EARLY_CONV_NEW_IMPLEMENT: True
+  N_LAYERS: 1
+  VISUAL_LAYER_MINUS1: False
+
+  # >>>>>>>>>>>> For residual block in earlyconv <<<<<<<<<<<<<
+  EARLY_CONV_RES: True
+  EARLY_CONV_RES_FIRSTCONV_KERNEL: 3
+  EARLY_CONV_RES_BLOCK: 'basic_v0'  # 'bottleneck' 'basic_v1'
+  EARLY_CONV_RES_LAYERS: [1, 1, 1, 1]
+  EARLY_CONV_RES_STRIDES: [2, 2, 2, 1]
+

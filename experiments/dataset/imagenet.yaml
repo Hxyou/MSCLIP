@@ -1,0 +1,14 @@
+# GPUS: (0,)
+DATA_DIR: ''
+
+DATASET:
+  DATASET: 'imagenet'
+  DATA_FORMAT: 'jpg'
+  ROOT: 'DATASET/imagenet/'
+  TRAIN_SET: 'train'
+  TEST_SET: 'val'
+  NUM_CLASSES: 1000
+TEST:
+  METRIC: 'accuracy'
+DEBUG:
+  DEBUG: false

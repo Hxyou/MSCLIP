@@ -13,6 +13,7 @@ By Haoxuan You*, Luowei Zhou*, Bin Xiao*, Noel Codella*, Yu Cheng, Ruochen Xu, S
 ![MS-CLIP](/Figs/diagram1.png)
 
 we investigate a variety of Modality-Shared Contrastive Language-Image Pre-training (MS-CLIP) frameworks. More specifically, we question how many parameters of a transformer model can be shared across modalities during contrastive pre-training, and rigorously examine architectural design choices that position the proportion of parameters shared along a spectrum. In studied conditions, we observe that a mostly unified encoder for vision and language signals outperforms all other variations that separate more parameters. Additionally, we find that light-weight modality-specific parallel modules further improve performance.
+
 ![MS-CLIP-S](/Figs/diagram2.png)
 
 
@@ -22,9 +23,9 @@ we investigate a variety of Modality-Shared Contrastive Language-Image Pre-train
 ## Benchmarking
 | Model | Training Set | Top-1 on IN-1K | LP on 24 datasets | Download
 | :----: | :---: | :---: | :---: | :---: |
-| MS-CLIP-S (ViT-B/32) | YFCC-22M | 36.7 | 68.5 | [ckpt](https://projects4jw.blob.core.windows.net/unicl/release/in1k.pth)/[config](configs/unicl_swin_tiny.yaml)
-| MS-CLIP-S (ViT-B/16) | YFCC-22M | 39.0 | 70.4 | [ckpt](https://projects4jw.blob.core.windows.net/unicl/release/in1k_gcc3m.pth)/[config](configs/unicl_swin_tiny.yaml)
-| MS-CLIP-S (ViT-B/32) |LAION-20M| 40.2 | 73.3 | [ckpt](https://projects4jw.blob.core.windows.net/unicl/release/in1k_yfcc14m.pth)/[config](configs/unicl_swin_tiny.yaml)
+| MS-CLIP-S (ViT-B/32) | YFCC-22M | 36.7 | 68.5 | [ckpt](https://1drv.ms/u/s!ApxSG5cLDhMkg4M4h8GPb7QYsUoM6Q)/[config](experiments/model/b32-yfcc-msclips.yaml)
+| MS-CLIP-S (ViT-B/16) | YFCC-22M | 39.0 | 70.4 | [ckpt](https://1drv.ms/u/s!ApxSG5cLDhMkg4M3PYoDKdcrR7NOgQ?e=ExKwEW)/[config](experiments/model/b16-yfcc-msclips.yaml)
+| MS-CLIP-S (ViT-B/32) |LAION-20M| 40.2 | 73.3 | [ckpt](https://1drv.ms/u/s!ApxSG5cLDhMkg4M57QFPJzPrMReF8A?e=eGW8NX)/[config](experiments/model/b16-yfcc-msclips.yaml)
 
 
 
