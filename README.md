@@ -1,2 +1,54 @@
-# MSCLIP
-Official Implementation of ECCV 2022 paper MS-CLIP
+# MS-CLIP
+
+This repo contains the source code of our ECCV 2022 paper:
+
+[**Learning Visual Representation from Modality-Shared Contrastive Language-Image Pre-training**](https://openreview.net/pdf?id=ROteIE-4A6W)
+<br>
+2022 European Conference on Computer Vision (ECCV 2022)
+<br>
+By Haoxuan You*, Luowei Zhou*, Bin Xiao*, Noel Codella*, Yu Cheng, Ruochen Xu, Shih-Fu Chang, Lu Yuan.
+
+
+## Introduction
+![MS-CLIP](/Figs/diagram1.png)
+
+we investigate a variety of Modality-Shared Contrastive Language-Image Pre-training (MS-CLIP) frameworks. More specifically, we question how many parameters of a transformer model can be shared across modalities during contrastive pre-training, and rigorously examine architectural design choices that position the proportion of parameters shared along a spectrum. In studied conditions, we observe that a mostly unified encoder for vision and language signals outperforms all other variations that separate more parameters. Additionally, we find that light-weight modality-specific parallel modules further improve performance.
+![MS-CLIP-S](/Figs/diagram2.png)
+
+
+## Update
+- [07/20/2022] Released pretrained model and zero-shot evaluation on ImageNet-1k.
+
+## Benchmarking
+| Model | Training Set | Top-1 on IN-1K | LP on 24 datasets | Download
+| :----: | :---: | :---: | :---: | :---: |
+| MS-CLIP-S (ViT-B/32) | YFCC-22M | 36.7 | 68.5 | [ckpt](https://projects4jw.blob.core.windows.net/unicl/release/in1k.pth)/[config](configs/unicl_swin_tiny.yaml)
+| MS-CLIP-S (ViT-B/16) | YFCC-22M | 39.0 | 70.4 | [ckpt](https://projects4jw.blob.core.windows.net/unicl/release/in1k_gcc3m.pth)/[config](configs/unicl_swin_tiny.yaml)
+| MS-CLIP-S (ViT-B/32) |LAION-20M| 40.2 | 73.3 | [ckpt](https://projects4jw.blob.core.windows.net/unicl/release/in1k_yfcc14m.pth)/[config](configs/unicl_swin_tiny.yaml)
+
+
+
+## Getting Started
+### Installation
+### Data preparation
+### Evaluation
+
+
+<!-- ## Citation
+If you find this project useful for your research, please kindly cite our paper:
+
+```bibtex
+@incollection{NIPS2019_8940,
+title = {PointDAN: A Multi-Scale 3D Domain Adaption Network for Point Cloud Representation},
+author = {Qin, Can and You, Haoxuan and Wang, Lichen and Kuo, C.-C. Jay and Fu, Yun},
+booktitle = {Advances in Neural Information Processing Systems 32},
+editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+pages = {7190--7201},
+year = {2019},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/8940-pointdan-a-multi-scale-3d-domain-adaption-network-for-point-cloud-representation.pdf}
+}
+``` -->
+
+## Contact
+If you have any questions, please contact [Haoxuan You](haoxuanyou@gmail.com) or [Luowei Zhou](zhouluoweiwest@gmail.com).
