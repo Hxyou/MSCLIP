@@ -20,12 +20,12 @@ we investigate a variety of Modality-Shared Contrastive Language-Image Pre-train
 ## Update
 - [07/20/2022] Released pretrained model and zero-shot evaluation on ImageNet-1k.
 
-## Benchmarking
+## Pre-trained Weights
 | Model | Training Set | Top-1 on IN-1K | LP on 24 datasets | Download
 | :----: | :---: | :---: | :---: | :---: |
 | MS-CLIP-S (ViT-B/32) | YFCC-22M | 36.7 | 68.5 | [ckpt](https://1drv.ms/u/s!ApxSG5cLDhMkg4M4h8GPb7QYsUoM6Q)/[config](experiments/model/b32-yfcc-msclips.yaml)
 | MS-CLIP-S (ViT-B/16) | YFCC-22M | 39.0 | 70.4 | [ckpt](https://1drv.ms/u/s!ApxSG5cLDhMkg4M3PYoDKdcrR7NOgQ?e=ExKwEW)/[config](experiments/model/b16-yfcc-msclips.yaml)
-| MS-CLIP-S (ViT-B/32) |LAION-20M| 40.2 | 73.3 | [ckpt](https://1drv.ms/u/s!ApxSG5cLDhMkg4M57QFPJzPrMReF8A?e=eGW8NX)/[config](experiments/model/b16-yfcc-msclips.yaml)
+| MS-CLIP-S (ViT-B/32) |LAION-20M| 40.2 | 73.3 | [ckpt](https://1drv.ms/u/s!ApxSG5cLDhMkg4M57QFPJzPrMReF8A?e=eGW8NX)/[config](experiments/model/b32-laion-msclips.yaml)
 
 
 
@@ -33,7 +33,9 @@ we investigate a variety of Modality-Shared Contrastive Language-Image Pre-train
 ### Installation
 Please follow [INSTALL.md](./INSTALL.md) for installation
 ### Data preparation
-Please following [DATA.md](./DATA.md) for data preparation.
+Please following [DATA.md](./DATASET/DATA.md) for data preparation.
+### Pre-trained weights preparation
+Download from the links in the table above. Put the weights under `./OUTPUT_MODEL/`.
 ### Evaluation
 To evaluate a pre-trained MS-CLIP on ImageNet Zero-shot Classification, run:
 
