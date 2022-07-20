@@ -40,9 +40,9 @@ Download from the links in the table above. Put the weights under `./OUTPUT_MODE
 To evaluate a pre-trained MS-CLIP on ImageNet Zero-shot Classification, run:
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python tools/eval_zeroshot.py --model <config-file> \
-<config-file> e.g. experiments/model/b32-laion-msclips.yaml 
+CUDA_VISIBLE_DEVICES=0 python tools/eval_zeroshot.py --model <config-file> 
 ```
+where `<config-file>` is the config yaml under `experiments/model/`. E.g. `experiments/model/b32-laion-msclips.yaml`
 
 
 <!-- ## Citation
