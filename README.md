@@ -1,6 +1,6 @@
-# MS-CLIP
+# Learning Visual Representation from Modality-Shared Contrastive Language-Image Pre-training (MS-CLIP)
 
-This repo contains the source code of our ECCV 2022 paper:
+This repo contains the source code of our ECCV 2022 paper MS-CLIP:
 
 [**Learning Visual Representation from Modality-Shared Contrastive Language-Image Pre-training**](https://openreview.net/pdf?id=ROteIE-4A6W)
 <br>
@@ -31,8 +31,16 @@ we investigate a variety of Modality-Shared Contrastive Language-Image Pre-train
 
 ## Getting Started
 ### Installation
+Please follow [INSTALL.md](./INSTALL.md) for installation
 ### Data preparation
+Please following [DATA.md](./DATA.md) for data preparation.
 ### Evaluation
+To evaluate a pre-trained MS-CLIP on ImageNet Zero-shot Classification, run:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python tools/eval_zeroshot.py --model <config-file> \
+<config-file> e.g. experiments/model/b32-laion-msclips.yaml 
+```
 
 
 <!-- ## Citation
