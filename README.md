@@ -12,7 +12,7 @@ By Haoxuan You*, Luowei Zhou*, Bin Xiao*, Noel Codella*, Yu Cheng, Ruochen Xu, S
 ## Introduction
 ![MS-CLIP](/Figs/diagram1.png)
 
-we investigate a variety of Modality-Shared Contrastive Language-Image Pre-training (MS-CLIP) frameworks. More specifically, we question how many parameters of a transformer model can be shared across modalities during contrastive pre-training, and rigorously examine architectural design choices that position the proportion of parameters shared along a spectrum. In studied conditions, we observe that a mostly unified encoder for vision and language signals outperforms all other variations that separate more parameters. Additionally, we find that light-weight modality-specific parallel modules further improve performance.
+We investigate a variety of Modality-Shared Contrastive Language-Image Pre-training (MS-CLIP) frameworks. More specifically, we question how many parameters of a transformer model can be shared across modalities during contrastive pre-training, and rigorously examine architectural design choices that position the proportion of parameters shared along a spectrum. In studied conditions, we observe that a mostly unified encoder for vision and language signals outperforms all other variations that separate more parameters. Additionally, we find that light-weight modality-specific parallel modules further improve performance.
 
 ![MS-CLIP-S](/Figs/diagram2.png)
 
@@ -33,11 +33,11 @@ we investigate a variety of Modality-Shared Contrastive Language-Image Pre-train
 ### Installation
 Please follow [INSTALL.md](./INSTALL.md) for installation
 ### Data preparation
-Please following [DATA.md](./DATASET/DATA.md) for data preparation.
+Please follow [DATA.md](./DATASET/DATA.md) for data preparation.
 ### Pre-trained weights preparation
 Download from the links in the table above. Put the weights under `./OUTPUT_MODEL/`.
 ### Evaluation
-To evaluate a pre-trained MS-CLIP on ImageNet Zero-shot Classification, run:
+To evaluate a pre-trained MS-CLIP-S on ImageNet Zero-shot Classification, run:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python tools/eval_zeroshot.py --model <config-file> 
