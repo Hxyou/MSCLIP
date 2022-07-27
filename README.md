@@ -2,7 +2,7 @@
 
 This repo contains the source code of our ECCV 2022 paper MS-CLIP:
 
-[**Learning Visual Representation from Modality-Shared Contrastive Language-Image Pre-training**](https://openreview.net/pdf?id=ROteIE-4A6W)
+[**Learning Visual Representation from Modality-Shared Contrastive Language-Image Pre-training**](https://arxiv.org/abs/2207.12661)
 <br>
 2022 European Conference on Computer Vision (ECCV 2022)
 <br>
